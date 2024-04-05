@@ -1,17 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import { RecoilRoot } from "recoil";
+import Footer from "@components/Footer";
+import Header from "@components/Header";
+import Home from "@pages/Home";
 
 function App() {
   return (
     <>
-      <RecoilRoot>
-        <BrowserRouter>
-          <Header />
-          <Footer />
-        </BrowserRouter>
-      </RecoilRoot>
+      <BrowserRouter>
+        <Header />
+        <Home />
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
