@@ -3,11 +3,7 @@ import styled from "styled-components";
 import useToggle from "@zustand/toggle.js";
 
 const Wrapper = styled.div`
-  .all-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
+  color: white;
   font-weight: 700;
   width: 100%;
   height: 80px;
@@ -16,20 +12,39 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(1, 1, 1, 0.90);
+  padding: 0 20px;
 
   .all-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     height: 100%;
     align-items: center;
   }
-  .header {
+
+  .header-wrapper {
     flex-grow: 1;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .header img {
+    max-width: 35px;
+    margin-right: 10px;
+  }
+
+  .header span {
+    font-size: 1.2rem;
   }
 
   .nav-item{
     &:hover {
-      color: darkgray;
+      color: #fef37d;
     }
   
     &::after {
@@ -37,7 +52,7 @@ const Wrapper = styled.div`
       display: block;
       width: 0;
       height: 2px;
-      background-color: darkgray;
+      background-color: #fef37d;
       position: absolute
       left: 0;
       transition: width 0.3s ease;
@@ -55,9 +70,15 @@ function Header() {
     <>
       <Wrapper>
         <div className="all-wrapper">
-          <div className="header">
-            <Link to="/">Byeol Oh</Link>
+          <div className="header-wrapper">
+            <Link to="/">
+              <div className="header">
+                <img src="./byeol.png" />
+                <span>별이의 포트폴리오</span>
+              </div>
+            </Link>
           </div>
+
           <div className="nav-item">
             <Link to="/resume">Resume</Link>
           </div>

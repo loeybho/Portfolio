@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   .container {
-    padding-top: 60px;
+    padding: 80px 20px;
     max-width: 800px;
     margin: 0 auto;
   }
