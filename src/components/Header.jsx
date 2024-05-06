@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   font-weight: 700;
   width: 100%;
   height: 80px;
-  border-bottom: solid 1px white;
+  border-bottom: solid 1px black;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,9 +40,14 @@ const Wrapper = styled.div`
 
   .header span {
     font-size: 1.2rem;
+
+    &:hover {
+      color: #fef37d;
+    }
   }
 
   .nav-item{
+    margin-left: 20px;
     &:hover {
       color: #fef37d;
     }
@@ -61,6 +66,12 @@ const Wrapper = styled.div`
     &:hover::after {
       width: 100%;
     }
+  }
+
+  @media screen and (max-width: 430px) {
+.header span {
+  display: none;
+}
   }
 `;
 
