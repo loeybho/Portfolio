@@ -13,7 +13,6 @@ const Wrapper = styled.div`
   left: 0;
   z-index: 100;
   background-color: rgba(1, 1, 1, 0.90);
-  padding: 0 20px;
 
   .all-wrapper {
     max-width: 800px;
