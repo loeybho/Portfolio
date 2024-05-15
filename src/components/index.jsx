@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   .container {
-    padding: 80px 0;
     margin: 0 auto;
   }
 `;

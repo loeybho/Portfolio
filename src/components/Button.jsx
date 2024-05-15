@@ -10,8 +10,8 @@ const StyledButton = styled.button`
   color: white;
   padding: 10px 20px;
   border-radius: 7px;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 700;
   cursor: pointer;
   type: ${(props) => props.type};
 

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import useToggle from "@zustand/toggle.js";
 
 const Wrapper = styled.div`
   color: white;
@@ -12,9 +11,8 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 100; 
   background-color: rgba(1, 1, 1, 0.90);
-  padding: 0 20px;
 
   .all-wrapper {
     max-width: 800px;
@@ -75,7 +73,6 @@ const Wrapper = styled.div`
 `;
 
 function Header() {
-  const { bears, toggleOn } = useToggle();
   return (
     <>
       <Wrapper>
@@ -84,7 +81,7 @@ function Header() {
             <Link to="/">
               <div className="header">
                 <img src="./byeol.png" />
-                <p className="gradient">Byeol Oh </p>
+                <p className="gradient">Portfolio</p>
               </div>
             </Link>
           </div>
@@ -95,10 +92,6 @@ function Header() {
           <div className="nav-item">
             <Link to="/projects">Projects</Link>
           </div>
-          <h1>
-            <div>{bears ? "o" : "x"}</div>
-            <button onClick={toggleOn}>클릭</button>
-          </h1>
         </div>
       </Wrapper>
     </>

@@ -1,5 +1,23 @@
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  src: url("/fonts/GmarketSansLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  src: url("/fonts/GmarketSansMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  src: url("/fonts/GmarketSansBold.woff") format("woff");
+}
+
 :root {
-  font-family: "NanumSquareNeo", sans-serif;
+  font-family: "GmarketSans", sans-serif;
   font-size: 62.5%;
 }
 

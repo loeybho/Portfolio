@@ -5,7 +5,9 @@ import { useState, useEffect } from "react";
 
 const Wrapper = styled.div`
   background-color: black;
-  height: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 
   .thumb-img {
     width: 25vw;
@@ -13,37 +15,23 @@ const Wrapper = styled.div`
     min-width: 200px;
   }
 
+  .all-wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+  }
+
   h1 {
     font-size: 3rem;
     line-height: 1.285;
-    font-weight: 400;
+    font-weight: 300;
     color: white;
-  }
-
-  .all-wrapper {
-    display: flex;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
   }
 
   .profile {
     flex-grow: 1;
-  }
-
-  @media screen and (max-width: 430px) {
-    .all-wrapper {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .profile-thumb {
-      order: -1;
-    }
-
-    h1 {
-      padding-top: 50px;
-    }
   }
 
   .fade-in {
@@ -57,6 +45,33 @@ const Wrapper = styled.div`
     }
     to {
       opacity: 1;
+    }
+  }
+
+  .name-point {
+    font-weight: 400;
+  }
+
+  .button-wrapper {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 430px) {
+    .all-wrapper {
+      flex-direction: column-reverse;
+      box-shadow: inset 0 0 20px red;
+      text-align: center;
+    }
+
+    .profile-thumb {
+      box-shadow: inset 0 0 20px red;
+      margin: 0 auto;
+    }
+
+    .button-wrapper {
+      display: unset;
     }
   }
 `;
@@ -96,21 +111,23 @@ const Home = () => {
           <h1>
             안녕하세요! <br />
             <br />
-            <div className={`all-wrapper ${fadeIn ? "fade-in" : ""}`}>
+            <div className={`${fadeIn ? "fade-in" : ""}`}>
               {phrases[textIndex]}
             </div>
             프론트엔드 개발자 <br />
-            오별입니다.
+            <span className="name-point">오별</span>입니다.
           </h1>
 
-          <Link to="https://donoteatpasta.tistory.com/" target="_blank">
-            <Button backgroundcolor="yellow" hovercolor="#f3796d">
-              Blog
-            </Button>
-          </Link>
-          <Link to="https://github.com/loeybho" target="_blank">
-            <Button>Github</Button>
-          </Link>
+          <div className="button-wrapper">
+            <Link to="https://donoteatpasta.tistory.com/" target="_blank">
+              <Button backgroundcolor="#f3606d" hovercolor="#f3796d">
+                Blog
+              </Button>
+            </Link>
+            <Link to="https://github.com/loeybho" target="_blank">
+              <Button>Github</Button>
+            </Link>
+          </div>
         </div>
         <div className="profile-thumb">
           <img className="thumb-img" src="./byeol.png" />
