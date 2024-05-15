@@ -6,7 +6,7 @@ Button.propTypes = {
 };
 
 const StyledButton = styled.button`
-  background-color: ${(props) => props.backgroundColor || "#333"};
+  background-color: ${(props) => props.backgroundcolor || "#333"};
   color: white;
   padding: 10px 20px;
   border-radius: 7px;
@@ -16,7 +16,7 @@ const StyledButton = styled.button`
   type: ${(props) => props.type};
 
   &:hover {
-    background-color: ${(props) => props.hoverColor || "#666"};
+    background-color: ${(props) => props.hovercolor || "#666"};
   }
 `;
 

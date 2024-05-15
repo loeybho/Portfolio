@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import router from "@/routes";
+import "@/index.css";
 
 const GlobalStyles = createGlobalStyle`
     ${reset}
@@ -18,9 +19,6 @@ const GlobalStyles = createGlobalStyle`
     button{
       all:unset;
     }
-
-
-
 `;
 
 function App() {

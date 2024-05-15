@@ -5,6 +5,7 @@ import useToggle from "@zustand/toggle.js";
 const Wrapper = styled.div`
   color: white;
   font-weight: 700;
+  font-size: 1.8rem;
   width: 100%;
   height: 80px;
   border-bottom: solid 1px black;
@@ -13,6 +14,7 @@ const Wrapper = styled.div`
   left: 0;
   z-index: 100;
   background-color: rgba(1, 1, 1, 0.90);
+  padding: 0 20px;
 
   .all-wrapper {
     max-width: 800px;
@@ -37,9 +39,7 @@ const Wrapper = styled.div`
     margin-right: 10px;
   }
 
-  .header span {
-    font-size: 1.2rem;
-
+  .header p {
     &:hover {
       color: #fef37d;
     }
@@ -65,13 +65,13 @@ const Wrapper = styled.div`
     &:hover::after {
       width: 100%;
     }
-  }
 
   @media screen and (max-width: 430px) {
-.header span {
-  display: none;
-}
+      .header p {
+        display: none;
+      }
   }
+
 `;
 
 function Header() {
@@ -84,7 +84,7 @@ function Header() {
             <Link to="/">
               <div className="header">
                 <img src="./byeol.png" />
-                <span>별이의 포트폴리오</span>
+                <p className="gradient">Byeol Oh </p>
               </div>
             </Link>
           </div>
