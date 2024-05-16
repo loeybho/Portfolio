@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  padding: 0 20px;
 
   .thumb-img {
     width: 25vw;
@@ -48,8 +49,12 @@ const Wrapper = styled.div`
     }
   }
 
-  .name-point {
+  .text-point {
     font-weight: 400;
+  }
+
+  .name-point {
+    font-weight: 700;
   }
 
   .button-wrapper {
@@ -61,17 +66,33 @@ const Wrapper = styled.div`
   @media screen and (max-width: 430px) {
     .all-wrapper {
       flex-direction: column-reverse;
-      box-shadow: inset 0 0 20px red;
+      gap: 30px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.4;
+      font-weight: 300;
+      color: white;
+    }
+
+    .profile {
+      width: 100%;
       text-align: center;
+      display: flex;
+      flex-direction: column;
     }
 
     .profile-thumb {
-      box-shadow: inset 0 0 20px red;
       margin: 0 auto;
     }
 
+    .thumb-img {
+      min-width: 260px;
+    }
+
     .button-wrapper {
-      display: unset;
+      justify-content: center;
     }
   }
 `;
@@ -112,12 +133,11 @@ const Home = () => {
             안녕하세요! <br />
             <br />
             <div className={`${fadeIn ? "fade-in" : ""}`}>
-              {phrases[textIndex]}
+              <span className="text-point">{phrases[textIndex]}</span>
             </div>
             프론트엔드 개발자 <br />
             <span className="name-point">오별</span>입니다.
           </h1>
-
           <div className="button-wrapper">
             <Link to="https://donoteatpasta.tistory.com/" target="_blank">
               <Button backgroundcolor="#f3606d" hovercolor="#f3796d">

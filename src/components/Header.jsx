@@ -13,6 +13,8 @@ const Wrapper = styled.div`
   left: 0;
   z-index: 100; 
   background-color: rgba(1, 1, 1, 0.90);
+  padding: 0 20px;
+
 
   .all-wrapper {
     max-width: 800px;
@@ -37,10 +39,15 @@ const Wrapper = styled.div`
     margin-right: 10px;
   }
 
-  .header p {
+  .header-logo {
     &:hover {
       color: #fef37d;
+      transition: 0.3s ease;
     }
+  }
+
+  .navbar {
+    display: flex;
   }
 
   .nav-item{
@@ -80,18 +87,22 @@ function Header() {
           <div className="header-wrapper">
             <Link to="/">
               <div className="header">
-                <img src="./byeol.png" />
-                <p className="gradient">Portfolio</p>
+                <img src="/byeol.png" />
+                <p className="header-logo">Portfolio</p>
               </div>
             </Link>
           </div>
 
-          <div className="nav-item">
-            <Link to="/resume">Resume</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/projects">Projects</Link>
-          </div>
+          <nav>
+            <ul className="navbar">
+              <li className="nav-item">
+                <Link to="/resume">Resume</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/projects">Projects</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </Wrapper>
     </>
