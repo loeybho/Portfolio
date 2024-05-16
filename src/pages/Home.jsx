@@ -4,12 +4,12 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import Skillset from "@pages/Skillset";
 import Resume from "@pages/Resume";
 import Projects from "@pages/Projects";
+import AboutMe from "@pages/AboutMe";
 
 const Wrapper = styled.div``;
 
 const NavWrapper = styled.div`
   color: white;
-  font-weight: 700;
   font-size: 1.8rem;
   width: 100%;
   height: 80px;
@@ -36,16 +36,21 @@ const NavWrapper = styled.div`
 
   .header {
     display: flex;
+    width: 30%;
     align-items: center;
+    cursor: pointer;
   }
   
 
   .header img {
     max-width: 40px;
     margin-right: 10px;
+
   }
 
   .header-logo {
+    cursor: pointer;
+    font-weight: 700;
     &:hover {
       color: #fef37d;
       transition: 0.3s ease;
@@ -61,7 +66,9 @@ const NavWrapper = styled.div`
   }
 
   .nav-item{
-    margin-left: 20px;
+    cursor: pointer;
+    margin-left: 18px;
+    font-size: 1.4rem;
     &:hover {
       color: #fef37d;
     }
@@ -129,6 +136,30 @@ const Home = () => {
               <li className="nav-item">
                 <Link
                   activeClass="active"
+                  to="aboutme"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  About Me
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="skillset"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Skill set
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
                   to="resume"
                   spy={true}
                   smooth={true}
@@ -139,7 +170,16 @@ const Home = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/projects">Projects</Link>
+                <Link
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Projects
+                </Link>
               </li>
               <li>
                 <button className="nav-menu">
@@ -153,6 +193,9 @@ const Home = () => {
       <Wrapper>
         <div id="cover">
           <Cover />
+        </div>
+        <div id="aboutme">
+          <AboutMe />
         </div>
         <div id="skillset">
           <Skillset />
