@@ -1,159 +1,170 @@
-import Button from "@components/Button";
-import { Link } from "react-router-dom";
+import Cover from "@pages/Cover";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Skillset from "@pages/Skillset";
+import Resume from "@pages/Resume";
+import Projects from "@pages/Projects";
 
-const Wrapper = styled.div`
-  background-color: black;
-  height: 100vh;
-  display: flex;
-  align-items: center;
+const Wrapper = styled.div``;
+
+const NavWrapper = styled.div`
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+  width: 100%;
+  height: 80px;
+  border-bottom: solid 1px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; 
+  background-color: rgba(1, 1, 1, 0.90);
   padding: 0 20px;
 
-  .thumb-img {
-    width: 25vw;
-    max-width: 300px;
-    min-width: 200px;
-  }
 
   .all-wrapper {
-    display: flex;
-    align-items: flex-end;
-    margin: 0 auto;
-    width: 100%;
     max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
 
-  h1 {
-    font-size: 3rem;
-    line-height: 1.285;
-    font-weight: 300;
-    color: white;
-  }
-
-  .profile {
+  .header-wrapper {
     flex-grow: 1;
   }
 
-  .fade-in {
-    opacity: 0;
-    animation: fade-in-animation 1s forwards;
-  }
-
-  @keyframes fade-in-animation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .text-point {
-    font-weight: 400;
-  }
-
-  .name-point {
-    font-weight: 700;
-  }
-
-  .button-wrapper {
-    margin-top: 20px;
+  .header {
     display: flex;
-    gap: 10px;
+    align-items: center;
+  }
+  
+
+  .header img {
+    max-width: 40px;
+    margin-right: 10px;
   }
 
-  @media screen and (max-width: 430px) {
-    .all-wrapper {
-      flex-direction: column-reverse;
-      gap: 30px;
+  .header-logo {
+    &:hover {
+      color: #fef37d;
+      transition: 0.3s ease;
     }
+  }
 
-    h1 {
-      font-size: 2.2rem;
-      line-height: 1.4;
-      font-weight: 300;
-      color: white;
+  .navbar {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-item{
+    margin-left: 20px;
+    &:hover {
+      color: #fef37d;
     }
-
-    .profile {
+  
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #fef37d;
+      position: absolute
+      left: 0;
+      transition: width 0.3s ease;
+    }
+  
+    &:hover::after {
       width: 100%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
     }
+}
 
-    .profile-thumb {
-      margin: 0 auto;
-    }
+    @media screen and (max-width: 430px) {
+      .header-logo {
+        display: none;
+      }
 
-    .thumb-img {
-      min-width: 260px;
-    }
+      .nav-item {
+        display: none;
+      }
 
-    .button-wrapper {
-      justify-content: center;
+      .nav-menu {
+        display: flex;
+      }
     }
-  }
+    
+
 `;
 
 const Home = () => {
-  const [textIndex, setTextIndex] = useState(0);
-  const [fadeIn, setFadeIn] = useState(true);
-  const [phrases, setPhrases] = useState([
-    "훌륭한 사용자 경험을 디자인하는",
-    "새로운 기술을 익히는데 유연한",
-    "효율적인 코드 작성을 고민하는",
-  ]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTextIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-      setFadeIn(true); // 페이드 인 설정
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [phrases]); // phrases 배열이 변경될 때마다 효과 적용
-
-  // 페이드 인이 완료되면 다음 텍스트를 표시하고 페이드 인 효과 해제
-  useEffect(() => {
-    if (fadeIn) {
-      const timeout = setTimeout(() => {
-        setFadeIn(false);
-      }, 1000); // 페이드 인 지속시간
-      return () => clearTimeout(timeout);
-    }
-  }, [fadeIn]);
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
-    <Wrapper>
-      <div className="all-wrapper">
-        <div className="profile">
-          <h1>
-            안녕하세요! <br />
-            <br />
-            <div className={`${fadeIn ? "fade-in" : ""}`}>
-              <span className="text-point">{phrases[textIndex]}</span>
-            </div>
-            프론트엔드 개발자 <br />
-            <span className="name-point">오별</span>입니다.
-          </h1>
-          <div className="button-wrapper">
-            <Link to="https://donoteatpasta.tistory.com/" target="_blank">
-              <Button backgroundcolor="#f3606d" hovercolor="#f3796d">
-                Blog
-              </Button>
-            </Link>
-            <Link to="https://github.com/loeybho" target="_blank">
-              <Button>Github</Button>
+    <>
+      <NavWrapper>
+        <div className="all-wrapper">
+          <div className="header-wrapper">
+            <Link
+              activeClass="active"
+              to="cover"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <div className="header">
+                <img src="/byeol.png" />
+                <p className="header-logo">Portfolio</p>
+              </div>
             </Link>
           </div>
+
+          <nav>
+            <ul className="navbar">
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="resume"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Resume
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <button className="nav-menu">
+                  <img src="/menu.svg" />
+                </button>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div className="profile-thumb">
-          <img className="thumb-img" src="./byeol.png" />
+      </NavWrapper>
+      <Wrapper>
+        <div id="cover">
+          <Cover />
         </div>
-      </div>
-    </Wrapper>
+        <div id="skillset">
+          <Skillset />
+        </div>
+        <div id="resume">
+          <Resume />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+      </Wrapper>
+    </>
   );
 };
 

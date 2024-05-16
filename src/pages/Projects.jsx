@@ -1,9 +1,12 @@
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  background-color: white;
+  padding-top: 1000px;
+`;
+
 function Projects() {
-  return (
-    <>
-      <h1>Projects</h1>
-    </>
-  );
+  return <Wrapper>projects</Wrapper>;
 }
 
 export default Projects;
