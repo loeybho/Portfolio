@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   .all-contents {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    gap: 10px;
     font-size: 1.8rem;
     line-height: 1.285;
     font-weight: 300;
@@ -45,6 +45,12 @@ const Wrapper = styled.div`
   .contents {
     margin-top: 20px;
   }
+
+  .contents-item {
+    width: 400px;
+    box-shadow: inset 0 0 20px red;
+    margin: 10px 0;
+  }
 `;
 
 function Projects() {
@@ -53,23 +59,9 @@ function Projects() {
       <Wrapper>
         <div className="all-wrapper">
           <h1 className="category">Projects</h1>
-
           <div className="all-contents">
-            <div className="contents-header">
-              <p>I aspire to be a great creator</p>
-            </div>
-            <div className="contents">
-              <div>
-                <h2>그래픽 디자인에서 프론트엔드 개발까지</h2>
-                <p>
-                  그래픽 디자이너로 약 2년 간 고객의 클릭을 유도하는 이미지를
-                  만들었습니다.
-                  <br />
-                  의도한 바를 화면에 구현하고, 사용자의 행동을 유도하는 것에
-                  흥미가 생겨 프론트엔드 개발을 배우기 시작했습니다.
-                </p>
-              </div>
-            </div>
+            <div className="contents-item">project1</div>
+            <div className="contents-item">project2</div>
           </div>
         </div>
       </Wrapper>

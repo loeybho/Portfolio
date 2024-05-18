@@ -43,7 +43,23 @@ const Wrapper = styled.div`
   }
 
   .contents-career {
-    background-color: #db4455;
+    border-bottom: solid white 1px;
+    padding: 30px 0;
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+
+  .contents-header {
+    display: flex;
+  }
+  .contents-header h2 {
+    flex-grow: 1;
+  }
+
+  p {
+    padding: 5px 0;
   }
 `;
 
@@ -57,8 +73,13 @@ function Resume() {
           <div className="all-contents">
             <div className="contents">
               <div className="contents-career">
-                <h2>멋쟁이 사자처럼(프로젝트 팀장)</h2>
-                <p>이력</p>
+                <div className="contents-header">
+                  <h2>멋쟁이 사자처럼 프론트엔드 개발 수업 (프로젝트 팀장)</h2>
+                  <p>2023.12.01~ 2024.05.01</p>
+                </div>
+
+                <p>• 무슨일을 했냐면</p>
+                <p>• 무슨일을 했냐면</p>
                 <p>• 무슨일을 했냐면</p>
               </div>
             </div>
