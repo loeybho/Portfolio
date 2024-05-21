@@ -5,29 +5,22 @@ const Wrapper = styled.div`
   color: white;
   padding: 0 20px;
   padding-top: 20px;
-
   padding-bottom: 120px;
+
   .all-wrapper {
     max-width: 800px;
     margin: 0 auto;
   }
 
-  .category {
-    font-size: 2.2rem;
-    border-radius: 10px;
+  h1 {
     font-weight: 700;
-    position: relative;
-    display: inline;
+    font-size: 2.2rem;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 100%;
-      height: 2px;
-      background-color: white;
-    }
+  .category {
+    border-bottom: solid 2px white;
+    display: inline;
+    padding-bottom: 2px;
   }
 
   .all-contents {

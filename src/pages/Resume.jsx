@@ -10,22 +10,15 @@ const Wrapper = styled.div`
     margin: 0 auto;
   }
 
-  .category {
-    font-size: 2.2rem;
-    border-radius: 10px;
+  h1 {
     font-weight: 700;
-    position: relative;
-    display: inline;
+    font-size: 2.2rem;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 100%;
-      height: 2px;
-      background-color: white;
-    }
+  .category {
+    border-bottom: solid 2px white;
+    display: inline;
+    padding-bottom: 2px;
   }
 
   .all-contents {
@@ -68,6 +61,7 @@ const Wrapper = styled.div`
     padding: 4px 0;
     font-size: 1.6rem;
   }
+
   @media screen and (max-width: 700px) {
     .contents-header {
       flex-direction: column;
@@ -92,16 +86,17 @@ function Resume() {
                   </h2>
                   <p>2023.12.01~ 2024.04.26</p>
                 </div>
-
-                <p>
-                  • 기획, 디자인, 개발 일정 조율 및 팀원들간의 협력 및 업무
-                  조직화
-                </p>
-                <p>
-                  • CSS, HTML, Javascript, React 등 실제 개발 경험을 통해
-                  프로그래밍 스킬 향상
-                </p>
-                <p>• UI/UX 디자인 원리와 웹사이트 구조에 대한 이해 향상</p>
+                <div>
+                  <p>
+                    • 기획, 디자인, 개발 일정 조율 및 팀원들간의 협력 및 업무
+                    조직화
+                  </p>
+                  <p>
+                    • CSS, HTML, Javascript, React 등 실제 개발 경험을 통해
+                    프로그래밍 스킬 향상
+                  </p>
+                  <p>• UI/UX 디자인 원리와 웹사이트 구조에 대한 이해 향상</p>
+                </div>
               </div>
               <div className="contents-career">
                 <div className="contents-header">
