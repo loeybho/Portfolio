@@ -2,7 +2,6 @@ import CustomSwiper from "@components/CustomSwiper";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: black;
   color: white;
   padding: 0 20px;
   padding-top: 20px;
@@ -67,11 +66,11 @@ function AboutMe() {
               <div>
                 <h2>그래픽 디자인에서 프론트엔드 개발까지</h2>
                 <p>
-                  그래픽 디자이너로 약 2년 간 고객의 클릭을 유도하는 이미지를
-                  만들었습니다.
+                  그래픽 디자이너로 약 2년 간 고객과 상호작용하고, 클릭을
+                  사로잡는 콘텐츠를 만들었습니다.
                   <br />
-                  의도한 바를 화면에 구현하고, 사용자의 행동을 유도하는 것에
-                  흥미가 생겨 프론트엔드 개발을 배우기 시작했습니다.
+                  의도한 바를 화면에 구현하고, 사용자의 행동을 유도하는 디자인에
+                  흥미가 생겨 UX, UI와 프론트엔드 개발을 배우기 시작했습니다.
                 </p>
               </div>
             </div>

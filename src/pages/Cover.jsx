@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 const Wrapper = styled.div`
-  background-color: black;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -63,7 +62,8 @@ const Wrapper = styled.div`
     gap: 10px;
   }
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 700px) {
+    min-width: 100%;
     .all-wrapper {
       flex-direction: column-reverse;
       gap: 30px;

@@ -6,8 +6,6 @@ import Resume from "@pages/Resume";
 import Projects from "@pages/Projects";
 import AboutMe from "@pages/AboutMe";
 
-const Wrapper = styled.div``;
-
 const NavWrapper = styled.div`
   color: white;
   font-size: 1.8rem;
@@ -89,7 +87,7 @@ const NavWrapper = styled.div`
     }
 }
 
-    @media screen and (max-width: 430px) {
+    @media screen and (max-width: 700px) {
       .header-logo {
         display: none;
       }
@@ -107,10 +105,6 @@ const NavWrapper = styled.div`
 `;
 
 const Home = () => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
   return (
     <>
       <NavWrapper>
@@ -190,23 +184,22 @@ const Home = () => {
           </nav>
         </div>
       </NavWrapper>
-      <Wrapper>
-        <div id="cover">
-          <Cover />
-        </div>
-        <div id="aboutme">
-          <AboutMe />
-        </div>
-        <div id="skillset">
-          <Skillset />
-        </div>
-        <div id="resume">
-          <Resume />
-        </div>
-        <div id="projects">
-          <Projects />
-        </div>
-      </Wrapper>
+
+      <div id="cover">
+        <Cover />
+      </div>
+      <div id="aboutme">
+        <AboutMe />
+      </div>
+      <div id="skillset">
+        <Skillset />
+      </div>
+      <div id="resume">
+        <Resume />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
     </>
   );
 };

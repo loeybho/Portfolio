@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: black;
   color: white;
   padding: 0 20px;
   padding-top: 20px;
   padding-bottom: 100px;
+  width: 100%;
+
   .all-wrapper {
     max-width: 800px;
     margin: 0 auto;
@@ -81,6 +82,20 @@ const Wrapper = styled.div`
   .coding-desc {
     display: flex;
     padding-left: 10px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .contents-tools {
+      flex-direction: column;
+    }
+
+    .contents-coding {
+      flex-wrap: wrap;
+    }
+
+    .coding-desc {
+      flex-wrap: wrap;
+    }
   }
 `;
 
