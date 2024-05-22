@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 
   .all-wrapper {
     max-width: 800px;
+    min-width: 390px;
     margin: 0 auto;
   }
 

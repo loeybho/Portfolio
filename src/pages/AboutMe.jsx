@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   .all-wrapper {
     max-width: 800px;
     margin: 0 auto;
+    min-width: 390px;
   }
 
   h1 {
