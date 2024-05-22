@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   color: white;
   padding: 0 20px;
   padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   width: 100%;
 
   .all-wrapper {
