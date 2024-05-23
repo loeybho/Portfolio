@@ -13,24 +13,13 @@ const Wrapper = styled.div`
     min-width: 390px;
   }
 
-  h1 {
-    font-weight: 700;
-    font-size: 2.2rem;
-  }
-
-  .category {
-    border-bottom: solid 2px white;
-    display: inline;
-    padding-bottom: 2px;
-  }
-
   .all-contents {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     font-size: 1.8rem;
-    line-height: 1.285;
-    font-weight: 300;
+    line-height: 1.5;
+    font-weight: 500;
   }
 
   .contents {
@@ -49,15 +38,20 @@ const Wrapper = styled.div`
   }
 
   h2 {
-    font-weight: 400;
+    font-weight: 700;
     padding-bottom: 20px;
   }
 
   .contents-header {
     display: flex;
   }
+
   .contents-header h2 {
     flex-grow: 1;
+  }
+
+  .contents-header p {
+    color: gray;
   }
 
   p {

@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .contents-main {
@@ -37,7 +37,6 @@ const Wrapper = styled.div`
   .profile-keyword {
     display: flex;
     justify-content: space-between;
-
     box-shawdow: inset 0 0 20px red;
     min-width: 400px;
     text-align: center;
@@ -80,10 +79,9 @@ function AboutMe() {
               <div className="main-contents">
                 <p>
                   마케팅 에이전시, 프리랜서 디자이너로 근무하여 2년 간 20개
-                  이상의 브랜드를 디자인했습니다. 이는 의도한 바를 화면에
-                  직접적으로 구현하고, 사용자의 행동을 유도하는 작업에 대한
-                  관심으로 이어져 UX, UI와 프론트엔드 개발을 배우기
-                  시작했습니다.
+                  이상의 브랜드를 디자인했습니다. 동적인 화면을 만들어, 사용자의
+                  행동을 유도하는 작업에 관심이 생겨 UX, UI와 프론트엔드 개발을
+                  배우기 시작했습니다.
                 </p>
               </div>
             </div>

@@ -12,25 +12,13 @@ const Wrapper = styled.div`
     min-width: 390px;
   }
 
-  h1 {
-    font-weight: 700;
-    font-size: 2.2rem;
-  }
-
-  .category {
-    border-bottom: solid 2px white;
-    display: inline;
-    padding-bottom: 2px;
-    font-size: 2.2rem;
-  }
-
   .all-contents {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 1.8rem;
-    line-height: 1.285;
-    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
   }
 
   .contents-header {
@@ -59,23 +47,18 @@ const Wrapper = styled.div`
   }
 
   h2 {
-    font-weight: 500;
-    color: white;
+    font-size: 2rem;
     font-weight: 700;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 10px;
     margin-bottom: 30px;
   }
 
   h3 {
-    font-weight: 400;
+    font-weight: 500;
     margin-right: 10px;
   }
 
   .coding-desc {
     display: flex;
-    padding-left: 10px;
   }
 
   @media screen and (max-width: 700px) {
