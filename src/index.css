@@ -24,6 +24,7 @@
 body {
   font-size: 1.4rem;
   background-color: black;
+  color: white;
 }
 
 @media (min-width: 1025px) and (max-width: 1680px) {

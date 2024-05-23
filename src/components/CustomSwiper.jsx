@@ -26,13 +26,18 @@ function CustomSwiper() {
           }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
-          slidesPerView={3}
+          slidesPerView={1}
           navigation={true}
           loop={true}
           pagination={{
             clickable: true,
           }}
           centeredSlides={true}
+          breakpoints={{
+            700: {
+              slidesPerView: 3,
+            },
+          }}
         >
           <SwiperSlide>
             <img src="/3.jpeg" alt="" />

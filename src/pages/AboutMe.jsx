@@ -2,7 +2,6 @@ import CustomSwiper from "@components/CustomSwiper";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  color: white;
   padding: 0 20px;
   padding-top: 20px;
   padding-bottom: 120px;
