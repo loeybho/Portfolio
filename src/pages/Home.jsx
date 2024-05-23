@@ -7,7 +7,6 @@ import Projects from "@pages/Projects";
 import AboutMe from "@pages/AboutMe";
 
 const NavWrapper = styled.div`
-  color: white;
   font-size: 1.8rem;
   width: 100%;
   height: 80px;
@@ -16,8 +15,9 @@ const NavWrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 100; 
-  background-color: rgba(1, 1, 1, 0.90);
+  background-color: rgba(10, 10, 10, 0.90);
   padding: 0 20px;
+  font-family: 'ghanachoco';
 
 
   .all-wrapper {
@@ -50,7 +50,7 @@ const NavWrapper = styled.div`
     cursor: pointer;
     font-weight: 700;
     &:hover {
-      color: #fef37d;
+      color: #f5cc17;
       transition: 0.3s ease;
     }
   }
@@ -68,7 +68,7 @@ const NavWrapper = styled.div`
     margin-left: 18px;
     font-size: 1.4rem;
     &:hover {
-      color: #fef37d;
+      color: #f5cc17;
     }
   
     &::after {
@@ -76,7 +76,7 @@ const NavWrapper = styled.div`
       display: block;
       width: 0;
       height: 2px;
-      background-color: #fef37d;
+      background-color: #f5cc17;
       position: absolute
       left: 0;
       transition: width 0.3s ease;

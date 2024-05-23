@@ -9,6 +9,11 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0 20px;
 
+  .profile-point {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
   .thumb-img {
     width: 25vw;
     max-width: 300px;
@@ -50,17 +55,21 @@ const Wrapper = styled.div`
   }
 
   .text-point {
-    font-weight: 400;
+    font-family: "ghanachoco";
   }
 
   .name-point {
-    font-weight: 700;
+    font-family: "ghanachoco";
   }
 
   .button-wrapper {
     margin-top: 20px;
     display: flex;
     gap: 10px;
+  }
+
+  .profile-point {
+    font-family: "NotoSans";
   }
 
   @media screen and (max-width: 700px) {
@@ -132,8 +141,7 @@ const Cover = () => {
         <div className="all-wrapper">
           <div className="profile">
             <h1>
-              안녕하세요! <br />
-              <br />
+              <span className="profile-point">안녕하세요</span>
               <div className={`${fadeIn ? "fade-in" : ""}`}>
                 <span className="text-point">{phrases[textIndex]}</span>
               </div>

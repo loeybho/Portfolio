@@ -4,10 +4,11 @@ import project_2 from "@assets/project_2.png";
 import project_3 from "@assets/project_3.png";
 import Button from "@components/Button";
 import { Link } from "react-router-dom";
+import CategoryName from "@components/CategoryName";
 
 const Wrapper = styled.div`
-  color: white;
   padding: 0 20px;
+  padding-top: 80px;
 
   .all-wrapper {
     max-width: 800px;
@@ -55,11 +56,6 @@ const Wrapper = styled.div`
     border: solid 2px gray;
   }
 
-  h1 {
-    font-weight: 700;
-    font-size: 2.4rem;
-  }
-
   p {
     margin: 10px 0;
   }
@@ -84,7 +80,7 @@ function Projects() {
     <>
       <Wrapper>
         <div className="all-wrapper">
-          <h1 className="category">Projects</h1>
+          <CategoryName>Projects</CategoryName>
           <div className="all-contents">
             <div className="contents-item">
               <div className="item-thumb">

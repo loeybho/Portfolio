@@ -1,10 +1,9 @@
+import CategoryName from "@components/CategoryName";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
   color: white;
-  padding: 0 20px;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding: 80px 20px;
   width: 100%;
 
   .all-wrapper {
@@ -61,8 +60,8 @@ const Wrapper = styled.div`
 
   h2 {
     font-weight: 500;
-    background-color: #fef37d;
-    color: black;
+    color: white;
+    font-weight: 700;
     display: inline-block;
     padding: 10px;
     border-radius: 10px;
@@ -103,7 +102,7 @@ function Skillset() {
     <>
       <Wrapper>
         <div className="all-wrapper">
-          <h1 className="category">Skill Set</h1>
+          <CategoryName>Skill set</CategoryName>
 
           <div className="all-contents">
             <div className="contents">

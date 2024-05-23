@@ -1,19 +1,15 @@
 @font-face {
-  font-family: "GmarketSans";
-  font-weight: 300;
-  src: url("/fonts/GmarketSansLight.woff") format("woff");
+  font-family: "Mansalva";
+  font-weight: 400;
+  src: url("/fonts/Mansalva-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "GmarketSans";
-  font-weight: 500;
-  src: url("/fonts/GmarketSansMedium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 700;
-  src: url("/fonts/GmarketSansBold.woff") format("woff");
+  font-family: "ghanachoco";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -47,7 +43,7 @@
 }
 
 :root {
-  font-family: "GmarketSans", sans-serif;
+  font-family: "NotoSans", sans-serif;
   font-size: 62.5%;
 }
 
@@ -55,5 +51,11 @@ body {
   font-size: 1.4rem;
   background-color: #111111;
   color: white;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
   line-height: 100;
+}
+
+h1 {
+  font-family: "ghanachoco";
 }

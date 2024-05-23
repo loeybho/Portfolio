@@ -1,10 +1,12 @@
+import CategoryName from "@components/CategoryName";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  color: white;
+  background-color: white;
+  color: #111111;
   padding: 0 20px;
-  padding-top: 20px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   .all-wrapper {
     max-width: 800px;
     margin: 0 auto;
@@ -40,8 +42,8 @@ const Wrapper = styled.div`
     padding: 40px 0;
 
     &:hover {
-      background-color: #ffa500;
-      color: black;
+      background-color: #f5cc17;
+      color: #111111;
       transition: background-color 0.3s;
     }
   }
@@ -75,7 +77,7 @@ function Resume() {
     <>
       <Wrapper>
         <div className="all-wrapper">
-          <h1 className="category">Resume</h1>
+          <CategoryName>Resume</CategoryName>
 
           <div className="all-contents">
             <div className="contents">
