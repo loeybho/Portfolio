@@ -18,7 +18,7 @@ const Button = ({ children, ...props }) => {
     const button = buttonRef.current;
 
     const hoverTween = gsap.to(button, {
-      background: "linear-gradient(to right, orange 0%, #f5cc17 100%)", // 왼쪽에서 오른쪽으로 채워지는 효과
+      background: "linear-gradient(to right, orange 0%, #f5cc17 100%)",
       ease: "power1.inOut",
       duration: 0.3,
       paused: true,
@@ -44,7 +44,6 @@ const Button = ({ children, ...props }) => {
         ref={buttonRef}
         style={{
           padding: "10px 30px",
-          border: "2px solid white",
           borderRadius: "50px",
           cursor: "pointer",
           background: "transparent",

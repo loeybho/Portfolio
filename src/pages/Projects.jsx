@@ -24,26 +24,38 @@ const Wrapper = styled.div`
     font-size: 1.8rem;
     line-height: 1.285;
     font-weight: 300;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
   .contents-item {
-    max-width: 380px;
-    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .item-name {
+    color: #111111;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  .item-body {
+    display: flex;
+    color: #111111;
+    gap: 20px;
   }
 
   .item-thumb {
-    max-width: 380px;
-    max-height: 380px;
+    max-width: 360px;
     width: 100%;
   }
 
   .item-story {
-    padding: 40px 0;
-    min-height: 300px;
-    padding-left: 5px;
+  }
+
+  .item-date {
+    color: gray;
+    text-align: center;
   }
 
   img {
@@ -52,11 +64,6 @@ const Wrapper = styled.div`
     object-fit: cover;
     object-position: top;
     border-radius: 20px;
-    border: solid 2px gray;
-  }
-
-  p {
-    margin: 10px 0;
   }
 
   .btn-github {
@@ -64,12 +71,14 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    .all-contents {
-      grid-template-columns: repeat(1, 1fr);
-    }
+    .item-body {
+      flex-direction: column;
 
-    .contents-item {
       width: 100%;
+      padding: 30px;
+    }
+    .item-thumb {
+      max-width: 100%;
     }
   }
 `;
@@ -82,19 +91,31 @@ function Projects() {
           <CategoryName>Projects</CategoryName>
           <div className="all-contents">
             <div className="contents-item">
-              <div className="item-thumb">
-                <Link to="https://cagongmap.netlify.app/" target="_blank">
-                  <img src={project_1} alt="카공여지도 썸네일" />
-                </Link>
-              </div>
-              <div className="item-story">
-                <h1>카공여지도</h1>
-                <p>공부하기 좋은 카페를 추천해주는 웹 어플리케이션</p>
-                <p>팀 프로젝트</p>
-                <p>React, Axios, Swiper, Recoil</p>
-                <Link to="https://github.com/loeybho" target="_blank">
-                  <Button className="btn-github">Github</Button>
-                </Link>
+              <h1 className="item-name">카공여지도</h1>
+              <p className="item-date">기간 (팀 프로젝트)</p>
+              <div className="item-body">
+                <div className="item-thumb">
+                  <Link to="https://cagongmap.netlify.app/" target="_blank">
+                    <img src={project_1} alt="카공여지도 썸네일" />
+                  </Link>
+                </div>
+                <div className="item-story">
+                  <p>공부하기 좋은 카페를 추천해주는 웹 어플리케이션</p>
+                  <p>팀 프로젝트</p>
+                  <p>React, Axios, Swiper, Recoil</p>
+                  <Link to="https://github.com/loeybho" target="_blank">
+                    <Button
+                      style={{
+                        border: "2px solid black",
+                        borderRadius: "50px",
+                        color: "black",
+                      }}
+                      className="btn-github"
+                    >
+                      Github
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
 

@@ -148,12 +148,26 @@ const Cover = () => {
             </h1>
             <div className="button-wrapper">
               <Link to="https://donoteatpasta.tistory.com/" target="_blank">
-                <Button backgroundcolor="#f3606d" hovercolor="#f3796d">
+                <Button
+                  style={{
+                    border: "2px solid white",
+                    borderRadius: "50px",
+                    color: "white",
+                  }}
+                >
                   Blog
                 </Button>
               </Link>
               <Link to="https://github.com/loeybho" target="_blank">
-                <Button>Github</Button>
+                <Button
+                  style={{
+                    border: "2px solid white",
+                    borderRadius: "50px",
+                    color: "white",
+                  }}
+                >
+                  Github
+                </Button>
               </Link>
             </div>
           </div>
