@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   .all-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    min-width: 390px;
   }
 
   .all-contents {
@@ -21,6 +20,7 @@ const Wrapper = styled.div`
   .contents-main {
     display: flex;
     padding: 80px 0;
+    width: 100%;
   }
 
   .main-header {
@@ -36,7 +36,6 @@ const Wrapper = styled.div`
 
   .profile-keyword {
     display: flex;
-    justify-content: space-between;
     box-shawdow: inset 0 0 20px red;
     min-width: 400px;
     text-align: center;
@@ -44,6 +43,7 @@ const Wrapper = styled.div`
 
   .keyword-icon {
     padding: 10px;
+    margin-right: 20px;
     border-radius: 20px;
     border: solid 2px white;
   }

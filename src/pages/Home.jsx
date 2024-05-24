@@ -14,11 +14,10 @@ const NavWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100; 
-  background-color: rgba(10, 10, 10, 0.90);
+  z-index: 100;
+  background-color: rgba(10, 10, 10, 0.9);
   padding: 0 20px;
-  font-family: 'ghanachoco';
-
+  font-family: "ghanachoco";
 
   .all-wrapper {
     max-width: 800px;
@@ -34,21 +33,17 @@ const NavWrapper = styled.div`
 
   .header {
     display: flex;
-    width: 30%;
     align-items: center;
     cursor: pointer;
+    max-width: 160px;
   }
-  
 
   .header img {
     max-width: 40px;
     margin-right: 10px;
-
   }
 
   .header-logo {
-    cursor: pointer;
-    font-weight: 700;
     &:hover {
       color: #f5cc17;
       transition: 0.3s ease;
@@ -63,14 +58,14 @@ const NavWrapper = styled.div`
     display: none;
   }
 
-  .nav-item{
+  .nav-item {
     cursor: pointer;
     margin-left: 18px;
     font-size: 1.4rem;
     &:hover {
       color: #f5cc17;
     }
-  
+
     &::after {
       content: "";
       display: block;
@@ -85,23 +80,21 @@ const NavWrapper = styled.div`
     &:hover::after {
       width: 100%;
     }
-}
+  }
 
-    @media screen and (max-width: 700px) {
-      .header-logo {
-        display: none;
-      }
-
-      .nav-item {
-        display: none;
-      }
-
-      .nav-menu {
-        display: flex;
-      }
+  @media screen and (max-width: 700px) {
+    .header-logo {
+      display: none;
     }
-    
 
+    .nav-item {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+    }
+  }
 `;
 
 const Home = () => {
@@ -145,7 +138,7 @@ const Home = () => {
                   to="skillset"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={-80}
                   duration={500}
                 >
                   Skill set
@@ -157,7 +150,7 @@ const Home = () => {
                   to="resume"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={-80}
                   duration={500}
                 >
                   Resume
@@ -169,7 +162,7 @@ const Home = () => {
                   to="projects"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={-80}
                   duration={500}
                 >
                   Projects
@@ -185,7 +178,7 @@ const Home = () => {
         </div>
       </NavWrapper>
 
-      <div id="cover">
+      <div id="cover" className="cover">
         <Cover />
       </div>
       <div id="aboutme">

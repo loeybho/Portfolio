@@ -7,12 +7,10 @@ import { Link } from "react-router-dom";
 import CategoryName from "@components/CategoryName";
 
 const Wrapper = styled.div`
-  padding: 0 20px;
-  padding-top: 80px;
+  padding: 80px 20px;
 
   .all-wrapper {
     max-width: 800px;
-    min-width: 390px;
     margin: 0 auto;
   }
 
@@ -32,12 +30,13 @@ const Wrapper = styled.div`
   }
 
   .contents-item {
-    width: 380px;
+    max-width: 380px;
+    width: 100%;
   }
 
   .item-thumb {
-    width: 380px;
-    height: 380px;
+    max-width: 380px;
+    max-height: 380px;
     width: 100%;
   }
 

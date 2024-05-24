@@ -9,6 +9,14 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0 20px;
 
+  .all-wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+  }
+
   .profile-point {
     font-size: 1.8rem;
     font-weight: 400;
@@ -18,15 +26,6 @@ const Wrapper = styled.div`
     width: 25vw;
     max-width: 300px;
     min-width: 200px;
-  }
-
-  .all-wrapper {
-    display: flex;
-    align-items: flex-end;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 800px;
-    min-width: 390px;
   }
 
   h1 {
@@ -73,7 +72,6 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    min-width: 100%;
     .all-wrapper {
       flex-direction: column-reverse;
       gap: 30px;

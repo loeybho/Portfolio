@@ -53,9 +53,5 @@ body {
   color: white;
   line-height: 1.5;
   letter-spacing: -0.4px;
-  line-height: 100;
-}
-
-h1 {
-  font-family: "ghanachoco";
+  min-width: 430px;
 }

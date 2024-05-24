@@ -4,12 +4,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   color: white;
   padding: 80px 20px;
-  width: 100%;
 
   .all-wrapper {
     max-width: 800px;
     margin: 0 auto;
-    min-width: 390px;
   }
 
   .all-contents {
