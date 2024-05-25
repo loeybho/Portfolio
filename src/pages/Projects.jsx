@@ -100,6 +100,12 @@ const Wrapper = styled.div`
     font-weight: 500;
   }
 
+  li {
+    list-style: disc;
+    padding: 4px;
+    margin-left: 20px;
+  }
+
   @media screen and (max-width: 700px) {
     .item-body {
       flex-direction: column;
