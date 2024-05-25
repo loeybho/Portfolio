@@ -19,6 +19,11 @@ const GlobalStyles = createGlobalStyle`
     button{
       all:unset;
     }
+    li {
+      list-style: disc;
+      padding: 4px;
+      margin-left: 20px;
+    }
 `;
 
 function App() {
