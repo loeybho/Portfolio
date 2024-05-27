@@ -223,7 +223,6 @@ function Projects() {
                 <div className="item-story">
                   <p>
                     원더렌즈는 방문했던 여행지의 사진을 모은 웹사이트입니다.
-                    심플한 UI에 반응형 디자인을
                   </p>
 
                   <div className="story-desc">
@@ -234,9 +233,7 @@ function Projects() {
                         구글 Map API를 활용하여 지도를 띄우고, 여행갔던 나라에
                         핀을 꽂았습니다.
                       </li>
-                      <li>
-                        심플한 UI를 그릴 예정이라 Tailwind를 사용하였습니다.
-                      </li>
+                      <li>Tailwind를 사용하여 심플한 UI를 완성했습니다.</li>
                       <li>
                         반응형 디자인을 적용하여 모바일 환경에도 적합하게
                         만들었고, 모바일 버전엔 햄버거 메뉴바로 카테고리 이동을
